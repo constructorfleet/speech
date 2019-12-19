@@ -7,7 +7,7 @@ RUN wget https://github.com/mozilla/DeepSpeech/releases/download/v0.1.1/deepspee
    tar -zxvf deepspeech-0.1.1-models.tar.gz && \
    rm deepspeech-0.1.1-models.tar.gz 
 
-RUN pip install deepspeech
+RUN pip install deepspeech-gpu
 RUN pip install deepspeech-server
 
 COPY ./models models
