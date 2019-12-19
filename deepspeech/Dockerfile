@@ -1,4 +1,4 @@
-FROM mbalenalib/amd64-ubuntu-python:3.7.5
+FROM balenalib/amd64-ubuntu-python:3.7.5
 
 RUN apt-get update && \
    apt-get install -y git nvidia-cuda-toolkit gcc-6
