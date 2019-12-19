@@ -8,7 +8,9 @@ RUN wget https://github.com/mozilla/DeepSpeech/releases/download/v0.1.1/deepspee
    rm deepspeech-0.1.1-models.tar.gz 
 
 RUN pip install deepspeech-gpu
-RUN pip install deepspeech-server
+RUN apt-get update && \
+   apt-get install -y git && \
+   pip install git+git://github.com/constructorfleet/deepspeech-server.git#egg=deepspeech-server
 
 COPY ./models models
 
