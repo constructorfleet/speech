@@ -7,10 +7,11 @@ RUN wget https://github.com/mozilla/DeepSpeech/releases/download/v0.1.1/deepspee
    tar -zxvf deepspeech-0.1.1-models.tar.gz && \
    rm deepspeech-0.1.1-models.tar.gz 
 
-RUN pip install deepspeech-gpu
 RUN apt-get update && \
-   apt-get install -y git && \
-   pip install git+git://github.com/constructorfleet/deepspeech-server.git#egg=deepspeech-server
+   apt-get install -y git nvidia-cuda-toolkit gcc-6
+
+RUN pip install deepspeech-gpu \
+   git+git://github.com/constructorfleet/deepspeech-server.git#egg=deepspeech-server
 
 COPY ./models models
 
