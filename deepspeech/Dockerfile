@@ -1,4 +1,4 @@
-FROM python:3.7.5
+FROM matthewfeickert/docker-python3-ubuntu:3.7.4
 
 RUN wget https://github.com/mozilla/DeepSpeech/releases/download/v0.1.1/audio-0.1.1.tar.gz && \
    tar -zxvf audio-0.1.1.tar.gz && \
